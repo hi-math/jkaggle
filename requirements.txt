@@ -1,3 +1,4 @@
+mysqlclient=2.2.4
 rpds-py==0.18.1
 scikit-learn==1.5.0
 scipy==1.13.1
@@ -11,19 +12,9 @@ st-annotated-text==4.0.1
 st-pages==0.4.5
 st-theme==1.2.3
 streamlit==1.35.0
-streamlit-authenticator==0.3.2
-streamlit-camera-input-live==0.2.0
-streamlit-card==1.0.2
-streamlit-embedcode==0.1.2
-streamlit-extras==0.4.3
-streamlit-faker==0.0.3
-streamlit-image-coordinates==0.1.9
-streamlit-keyup==0.2.4
-streamlit-option-menu==0.3.13
 termcolor==2.4.0
 threadpoolctl==3.5.0
 toml==0.10.2
 toolz==0.12.1
 tornado==6.4.1
 tqdm==4.66.4
-mysqlclient=2.2.4
