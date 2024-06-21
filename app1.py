@@ -127,14 +127,6 @@ with tab3:
 
 
 with tab4:
-    [connections.mysql]
-    dialect = "mysql"
-    driver = "pymysql"
-    host = "49.247.21.92"
-    port = 3306
-    database = "kaggle"
-    username = "ysahn22"
-    password = "dudtjr2@"
     
     connection_string = "mysql+pymysql://user:password@host:port/dbname"
     conn = st.connection(st.secrets["connections.mysql"]["dialect"], type='sql')   
