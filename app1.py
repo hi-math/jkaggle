@@ -182,7 +182,10 @@ with tab4:
 
     @st.experimental_dialog("upload")
     def score():
-        name = st.text_input("이름")
+        col1, col2 = st.columns(2)
+        name = col1.text_input("이름")
+        num = col2.text_input("학번")
+        
         uploaded_files = st.file_uploader("Choose a CSV file", type=['csv'], accept_multiple_files=False)        
         if uploaded_files is not None:
             try:
@@ -201,25 +204,28 @@ with tab4:
                     sub = st.button("제출", key='a1')     
                        
                 if sub:
-                    now = datetime.datetime.now()                    
-                    def sco(list)->float:
-                        answer = [0,1,0,0,1,1,0,0,0,0]
-                        right = 0
-                        for i in range(len(answer)):
-                            if answer[i] == pred[i]:
-                                right+=1
-                        acc = right/len(answer)*100
-                        return round(acc,2)
-                    
-                    score = sco(pred)
-                    trynn = 1
-                    st.write(f"이번 시도의 점수는 {score}입니다.")                    
-                    with conn.session as s:
-                        query = text(f'INSERT INTO mon VALUES ("{now}", "{name}", {score},{trynn});')
-                        s.execute(query)
-                        s.commit()
-                        button = False
-                        s.close()
+                    if login[name]==num:
+                        now = datetime.datetime.now()                    
+                        def sco(list)->float:
+                            answer = [0,1,0,0,1,1,0,0,0,0]
+                            right = 0
+                            for i in range(len(answer)):
+                                if answer[i] == pred[i]:
+                                    right+=1
+                            acc = right/len(answer)*100
+                            return round(acc,2)
+                        
+                        score = sco(pred)
+                        trynn = 1
+                        st.write(f"이번 시도의 점수는 {score}입니다.")                    
+                        with conn.session as s:
+                            query = text(f'INSERT INTO mon VALUES ("{now}", "{name}", {score},{trynn});')
+                            s.execute(query)
+                            s.commit()
+                            button = False
+                            s.close()
+                    else:
+                        st.warning("사용자 정보가 틀립니다.")
                 
                 
             except Exception as e:
