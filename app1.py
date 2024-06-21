@@ -136,7 +136,7 @@ with tab4:
     username = "ysahn22"
     password = "dudtjr2@"
     
-    connection_string = "mysql+pymysql://user:st.secrets["connections.mysql"]["password"]@host:port/dbname"
+    connection_string = "mysql+pymysql://user:password@host:port/dbname"
     conn = st.connection(st.secrets["connections.mysql"]["dialect"], type='sql')   
     col1, col2 = st.columns([3,1])
     col1.header("리더보드")
