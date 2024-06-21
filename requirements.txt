@@ -1,3 +1,4 @@
+pkg-config
 mysqlclient==2.2.3
 rpds-py==0.18.1
 scikit-learn==1.5.0
