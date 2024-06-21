@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 import time
-from streamlit_extras.switch_page_button import switch_page 
-from streamlit_option_menu import option_menu
-from st_pages import Page, show_pages, add_page_title, Section, Page
 from sqlalchemy import create_engine
 import pandas as pd
 from sqlalchemy.sql import text
