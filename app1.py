@@ -147,6 +147,7 @@ with tab4:
              "황인영":2425,
              "김윤":2906,
              "오태규":3815
+             "안영석":0000
             }
     connection_string = "mysql+pymysql://user:password@host:port/dbname"
     conn = st.connection('mysql', type='sql')   
@@ -204,7 +205,7 @@ with tab4:
                     sub = st.button("제출", key='a1')     
                        
                 if sub:
-                    if name in login and login[name]==num :
+                    if name in login and str(login[name]P==str(num) :
                         now = datetime.datetime.now()                    
                         def sco(list)->float:
                             answer = [0,1,0,0,1,1,0,0,0,0]
