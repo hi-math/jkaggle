@@ -135,7 +135,7 @@ with tab4:
     
     if st.button("새로고침",key="re"):
         conn.reset()
-        conn = st.connection('mysql', type='sql')   
+        conn = st.connection(st.secrets["connections.mysql"]["dialect"], type='sql')   
         
     df = conn.query('SELECT * FROM mon;', ttl=600)
     def aggregate_group(group):
