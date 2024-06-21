@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+[connections.mysql]
+dialect = "mysql"
+host = "49.247.21.92"
+port = 3306
+database = "kaggle"
+username = "ysahn22"
+password = "dudtjr2@"
+
+
 # Distribution / packaging
 .Python
 build/
