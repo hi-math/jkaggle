@@ -129,13 +129,13 @@ with tab3:
 with tab4:
     
     connection_string = "mysql+pymysql://user:password@host:port/dbname"
-    conn = st.connection(st.secrets["connections.mysql"]["dialect"], type='sql')   
+    conn = st.connection('mysql', type='sql')   
     col1, col2 = st.columns([3,1])
     col1.header("리더보드")
     
     if st.button("새로고침",key="re"):
         conn.reset()
-        conn = st.connection(st.secrets["connections.mysql"]["dialect"], type='sql')   
+        conn = st.connection('mysql', type='sql')   
         
     df = conn.query('SELECT * FROM mon;', ttl=600)
     def aggregate_group(group):
