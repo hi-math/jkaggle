@@ -205,7 +205,7 @@ with tab4:
                     sub = st.button("제출", key='a1')     
                        
                 if sub:
-                    if name in login and str(login[name]P==str(num) :
+                    if name in login and str(login[name]==str(num) :
                         now = datetime.datetime.now()                    
                         def sco(list)->float:
                             answer = [0,1,0,0,1,1,0,0,0,0]
