@@ -147,7 +147,7 @@ with tab4:
              "황인영":2425,
              "김윤":2906,
              "오태규":3815,
-             "안영석":0000
+             "안영석":1111
             }
     connection_string = "mysql+pymysql://user:password@host:port/dbname"
     conn = st.connection('mysql', type='sql')   
